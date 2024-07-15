@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "pipex.h"
-
+//count words
 static int	cwords(char *s, char c)
 {
 	int	l;
@@ -28,7 +28,7 @@ static int	cwords(char *s, char c)
 	}
 	return (l);
 }
-
+//allocation
 static char	*malloc_string(const char *s, char c)
 {
 	char	*t;
@@ -49,7 +49,7 @@ static char	*malloc_string(const char *s, char c)
 	t[i] = '\0';
 	return (t);
 }
-
+// cleaner
 static char	**clean_rows_(char **words, int i)
 {
 	while (i >= 0)
@@ -60,7 +60,7 @@ static char	**clean_rows_(char **words, int i)
 	free(words);
 	return (NULL);
 }
-
+// split
 char	**ft_split(char const *s, char c)
 {
 	int		i;
